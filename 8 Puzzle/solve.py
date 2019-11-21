@@ -65,6 +65,7 @@ def is_possible(board):
 
 def solve_board(board):
 
+    #this prints out the board or says not cool if it is not possible
     show_board(board)
     if not is_possible(board):
         print("Bro, not cool. Enter a valid board next time.")
