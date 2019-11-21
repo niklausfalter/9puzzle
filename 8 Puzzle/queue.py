@@ -1,4 +1,5 @@
 class Queue:
+    #sets up the items list and boards list to store each board
     def __init__(self):
         self.items = []
         self.boards = []
@@ -13,6 +14,7 @@ class Queue:
     def size(self):
         return len(self.items)
 
+    #if the items array is empty, return the empty list
     def is_empty(self):
         return self.items == []
 
@@ -29,5 +31,6 @@ class Queue:
         min_index = a.index(min(a))
         return self.items.pop(min_index)
 
+    #returns the item asked for
     def __getitem__(self, item):
         return self.items[item]
