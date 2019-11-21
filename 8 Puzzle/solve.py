@@ -17,21 +17,25 @@ def create_children(brd):
     for x in range(3):
         for y in range(3):
             if board[x][y] == 0:
-                if x == 0:
+                
+                if not x:
                     children.append(swap(brd, x, y, x+1, y))
                 if x == 1:
                     children.append(swap(brd, x, y, x - 1, y))
                     children.append(swap(brd, x, y, x + 1, y))
-                if x == 2:
+                else:
                     children.append(swap(brd, x, y, x - 1, y))
-                if y == 0:
+                    
+                if not y:
                     children.append(swap(brd, x, y, x, y + 1))
                 if y == 1:
                     children.append(swap(brd, x, y, x, y + 1))
                     children.append(swap(brd, x, y, x, y - 1))
-                if y == 2:
+                else:
                     children.append(swap(brd, x, y, x, y - 1))
                 break
+    
+    # My children are broken, please I would like to
     return children
 
 
