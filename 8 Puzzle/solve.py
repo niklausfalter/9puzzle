@@ -20,7 +20,7 @@ def create_children(brd):
                 
                 if not x:
                     children.append(swap(brd, x, y, x+1, y))
-                if x == 1:
+                elif x == 1:
                     children.append(swap(brd, x, y, x - 1, y))
                     children.append(swap(brd, x, y, x + 1, y))
                 else:
@@ -28,7 +28,7 @@ def create_children(brd):
                     
                 if not y:
                     children.append(swap(brd, x, y, x, y + 1))
-                if y == 1:
+                elif y == 1:
                     children.append(swap(brd, x, y, x, y + 1))
                     children.append(swap(brd, x, y, x, y - 1))
                 else:
