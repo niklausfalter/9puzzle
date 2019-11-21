@@ -1,7 +1,7 @@
 from solve import solve_board
 from random import randint
 
-
+# A comment
 def generate_board():
 
     num_list = [x for x in range(9)]
